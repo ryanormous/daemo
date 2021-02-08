@@ -1,0 +1,7 @@
+{
+    "Name": "daemo",
+    "Root": "/opt/daemo",
+    "Logfile": "",
+    "Pidfile": "daemo.pid",
+    "Version": "0.1"
+}

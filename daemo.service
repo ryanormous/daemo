@@ -1,0 +1,18 @@
+# CONFIGURATION FILE FOR RUNNING DAEMO AS SYSTEMD SERVICE
+
+[Unit]
+Description=daemo
+After=local-fs.target network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/opt/daemo/bin/daemo -conf /opt/daemo/conf/configuration.json
+Restart=always
+RestartSec=2
+Type=simple
+KillMode=process
+User=www-data
+Group=www-data
+
+[Install]
+WantedBy=multi-user.target
